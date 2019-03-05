@@ -40,7 +40,6 @@ public class AuthorServiceImpl implements AuthorService {
 	public List<Author> getAuthors() {
 		List<Author> authors = new ArrayList<>();
 		authorRepo.findAll().forEach(author -> {
-			author.setPassword("");
 			authors.add(author);
 		});
 		return authors;
